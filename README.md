@@ -1,4 +1,4 @@
-**Three** **[docker.io](www.docker.io "Docker")** Dockerfile's (_Ubuntu:14.04_) for any Redis setup involving some or all instances of:
+**Three** **[docker.io](http://docker.io "Docker")** Dockerfile's (_Ubuntu:14.04_) for any Redis setup involving some or all instances of:
 #####— standalone (**master**)
 #####— replication / mirroring (**slave**)
 #####— health checker and switch (**sentinel**)
