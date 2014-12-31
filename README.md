@@ -37,7 +37,7 @@ cd redis-master && docker build -t vigour/redis-master . && cd ..
 cd redis-slave  && docker build -t vigour/redis-slave . && cd ..
 cd redis-sentinel  && docker build -t vigour/redis-sentinel . && cd ..
 ```
-Each ``redis-slave`` requires linkage with its ralted ``redis-master`` by way of docker **--link** parameter referencing _container:id_  such as:
+Each ``redis-slave`` requires linkage with its related ``redis-master`` by way of docker **--link** parameter referencing _container:id_  such as:
 ```sh 
 docker run --link=redis0:redis_master -P --detach --name=redis0_slave vigour/redis-slave
 ```
