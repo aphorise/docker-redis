@@ -63,5 +63,5 @@ docker run -p 26380:26380 vigour/redis-sentinel --sentinel announce-ip 1.2.3.4 -
 
 ------
 Due accrediation, for tutorials & other related material referenced:
-###### [1- McKernan, J: Redis Master-Slave on Docker](www.hvflabs.com/posts/redis-master-slave-on-docker "blog")]
-###### [2- McKernan, J: Redis sentinel docker image / Dockerfile](www.stackoverflow.com/questions/25914814/redis-sentinel-docker-image-dockerfile/ "stackoverlfow")]
+###### [1- McKernan, J: Redis Master-Slave on Docker](www.hvflabs.com/posts/redis-master-slave-on-docker "blog")
+###### [2- (joshula): Redis sentinel docker image / Dockerfile](www.stackoverflow.com/questions/25914814/redis-sentinel-docker-image-dockerfile/ "stackoverlfow")
