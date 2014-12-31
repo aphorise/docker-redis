@@ -12,13 +12,15 @@ Redis-Master <--> Redis-Slave
           \_       _/
     	    |_   _|
               \ /
-       Redis-Sentinel-2```
+       Redis-Sentinel-2
+```
 ## Building & running: Standalone, Master & Slave
 #####Build & execution instructions are noted at the bottom of each Dockerfile.
 Begin by building the ``redis-base`` image which will be used by all three instances: 
 ```sh 
 you@some-machine:~/redis-dockers$ \
-docker build -t vigour/redis-base .```
+docker build -t vigour/redis-base .
+```
 Confirm ``redis-base`` is built & runs from prompt (_--rm_ flag to test & remove): 
 ```sh 
 you@some-machine:~/redis-dockers$ \
@@ -26,7 +28,8 @@ sudo docker run -it --rm --name=redis-base vigour/redis-base
 
 root@ffaaccee00ff:/# redis-server 
 # SHOULD START WITH LOGO & STATUS ... ctrl+c
-root@ffaaccee00ff:/# exit```
+root@ffaaccee00ff:/# exit
+```
 
 Thereafter all other images may be built by repeating the build process within the directory of required images:
 ```sh 
@@ -36,7 +39,8 @@ cd redis-sentinel  && docker build -t vigour/redis-sentinel . && cd ..
 ```
 Each ``redis-slave`` requires linkage with its ralted ``redis-master`` by way of docker **--link** parameter referencing _container:id_  such as:
 ```sh 
-docker run --link=redis0:redis_master -P --detach --name=redis0_slave vigour/redis-slave```
+docker run --link=redis0:redis_master -P --detach --name=redis0_slave vigour/redis-slave
+```
 A temporary redis-base can also be run linked to a master or a slave instance for the purposes of using the redis prompt utility **redis-cli** 
 ## Sentinel 
 Before building the ``redis-sentinel`` edit / Adjust **Dockerfile** to include the **IP** & **PORT** of at least one ``redis-master``:
