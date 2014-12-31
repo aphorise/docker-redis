@@ -11,7 +11,7 @@ RUN echo "sentinel failover-timeout mymaster 180000" >> /etc/redis/sentinel.conf
 RUN echo "sentinel parallel-syncs mymaster 1" >> /etc/redis/sentinel.conf
 
 ##///*******************************************************/
-EXPOSE 6379
+EXPOSE 6380
 VOLUME ["/data"]
 WORKDIR /data
 ENTRYPOINT ["redis-server", "/etc/redis/sentinel.conf", "--sentinel"]
