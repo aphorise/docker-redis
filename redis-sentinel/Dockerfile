@@ -1,5 +1,5 @@
 FROM vigour/redis-base:latest
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 ##///*******************************************************/
 ## set redis default to bind to all nic's.
 RUN sed -i 's/^\(bind .*\)$/# \1/' /etc/redis/redis.conf
